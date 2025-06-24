@@ -19,7 +19,8 @@ module.exports = {
     },
     {
       name: 'socket-server',
-      script: 'scripts/socket-server.js',
+      script: 'node',
+      args: 'scripts/socket-server.js',
       cwd: '/var/www/feature-scoping-game',
       env: {
         NODE_ENV: 'production',
