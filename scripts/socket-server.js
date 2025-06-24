@@ -217,7 +217,7 @@ function startTimer(roomCode) {
   }, 1000)
 }
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.SOCKET_PORT || 3001
 server.listen(PORT, () => {
   console.log(`Socket.IO server running on port ${PORT}`)
 })
