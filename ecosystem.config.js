@@ -4,7 +4,7 @@ module.exports = {
       name: 'feature-scoping-game',
       script: 'npm',
       args: 'start',
-      cwd: '/var/www/feature-scoping-game',
+      cwd: './',
       env: {
         NODE_ENV: 'production'
       },
@@ -12,16 +12,15 @@ module.exports = {
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-      error_file: '/var/log/pm2/feature-scoping-game-error.log',
-      out_file: '/var/log/pm2/feature-scoping-game-out.log',
-      log_file: '/var/log/pm2/feature-scoping-game-combined.log',
+      error_file: './logs/feature-scoping-game-error.log',
+      out_file: './logs/feature-scoping-game-out.log',
+      log_file: './logs/feature-scoping-game-combined.log',
       time: true
     },
     {
       name: 'socket-server',
-      script: 'node',
-      args: 'scripts/socket-server.js',
-      cwd: '/var/www/feature-scoping-game',
+      script: './scripts/socket-server.js',
+      cwd: './',
       env: {
         NODE_ENV: 'production',
         PORT: 3002
@@ -30,9 +29,9 @@ module.exports = {
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-      error_file: '/var/log/pm2/socket-server-error.log',
-      out_file: '/var/log/pm2/socket-server-out.log',
-      log_file: '/var/log/pm2/socket-server-combined.log',
+      error_file: './logs/socket-server-error.log',
+      out_file: './logs/socket-server-out.log',
+      log_file: './logs/socket-server-combined.log',
       time: true
     }
   ]
